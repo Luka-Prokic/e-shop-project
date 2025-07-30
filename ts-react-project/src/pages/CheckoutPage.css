@@ -1,0 +1,194 @@
+.checkout-page {
+    display: flex;
+    min-height: 256px;
+    width: 100%;
+    padding-top: 6%;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+    align-content: stretch;
+}
+
+.list-checkout-part {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    overflow: visible;
+    height: fit-content;
+}
+
+.logged-status-positive,
+.logged-status-negative {
+    height: 20px;
+    font: 100%;
+    color: white;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 22;
+    animation: fadeInMoveDown .5s ease forwards;
+}
+
+.logged-status-negative {
+    background-color: red;
+}
+
+.logged-status-negative>.text-button {
+    height: 100%;
+    width: 64px;
+    margin-left: 12px;
+    color: white;
+}
+
+.checkout-page>.back-button:has(b) {
+    position: fixed;
+    z-index: 3;
+    top: 6vh;
+    right: 2vh;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.list-checkout-part>b {
+    user-select: none;
+    z-index: 3;
+    animation: fadeIn 1s ease forwards;
+}
+
+.list-checkout-part>section {
+    user-select: none;
+    z-index: 3;
+    animation: fadeIn .5s ease forwards;
+}
+
+.list-checkout-part>.list {
+    background-color: transparent;
+    box-shadow: 2px 10px 30px rgb(0, 0, 0, .3);
+    animation: fadeInMoveDown .5s ease forwards;
+    transition: box-shadow ease .5s, height ease .5s;
+}
+
+.list-checkout-part>.list>div {
+    border-radius: 2px;
+    background-color: whitesmoke;
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 1px;
+}
+
+.list-checkout-part>.list>div:last-child {
+    margin-bottom: 0;
+}
+
+.list-checkout-part>.list>div>.shop-check {
+    margin: 0;
+    aspect-ratio: 1/.1;
+    user-select: none;
+}
+
+.list-checkout-part>.list>div>.shop-check>.image {
+    left: 40%;
+    z-index: -1;
+}
+
+.list-checkout-part>.list>div>.shop-check>.price {
+    left: 60%;
+    width: 40%;
+}
+
+.list-checkout-part>.list>div.removing {
+    opacity: 0;
+    overflow: hidden;
+    background-color: red;
+    filter: blur(12px);
+    transition: filter 0.3s ease, opacity 0.4s ease, background-color .4s ease;
+}
+
+.list-checkout-part>.list>div:not(.removing) {
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.list-checkout-part>.list>div::before {
+    content: "🗑️";
+    font-size: 0px;
+    width: 0%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.list-checkout-part>.list>div.dragging::before {
+    font-weight: bold;
+    background-color: red;
+    border-radius: 2px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    width: 20%;
+    pointer-events: none;
+    transition: width 0.2s ease, font-size 0.2s;
+    animation: error .2s ease;
+}
+
+.list-checkout-part>.list>div.dragging>.shop-check>.buy {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list-checkout-part>.list>div>.shop-check>.buy {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.list-checkout-part>.list>div>.shop-check:hover {
+    background-color: transparent;
+}
+
+.list-checkout-part>.list>div.dragging {
+    background: white;
+    z-index: 4;
+    box-shadow: 2px 10px 30px rgb(0, 0, 0, .3);
+    transition: background ease .2s;
+}
+
+.list-checkout-part>.list:has(div.dragging) {
+    box-shadow: 0 0 0 0 #ccc;
+    z-index: 1;
+    transition: box-shadow ease .4s;
+}
+
+.checkout-page .floating-label {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.checkout-page input {
+    position: relative;
+    height: 32px;
+    background: transparent;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 16px;
+    z-index: 0;
+    transition: padding .2s ease, background 0s;
+}
+
+.checkout-page .floating-label {
+    .error-input {
+        animation: error 0.5s ease forwards;
+    }
+}

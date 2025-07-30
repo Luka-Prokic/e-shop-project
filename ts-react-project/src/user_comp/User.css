@@ -1,0 +1,345 @@
+.blur-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(1px);
+    z-index: 5;
+}
+
+.login,
+.signup {
+    position: fixed;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 22px;
+    max-height: fit-content;
+    min-height: 320px;
+    max-width: 666px;
+    min-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    box-shadow: 0 0 420px 60px rgba(255, 255, 255, 0.2);
+    animation: fadeIn .4s ease;
+}
+
+.login>form,
+.signup>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    min-height: fit-content;
+    padding-bottom: 12px;
+    animation: fadeIn .8s ease;
+}
+
+.login>form {
+    padding-bottom: 6px;
+}
+
+.login>div,
+.signup>div {
+    display: flex;
+    width: 100%;
+}
+
+.login>div>h2,
+.signup>div>h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    user-select: none;
+    cursor: default;
+    animation: fadeIn .5s ease;
+}
+
+.login>div>button,
+.signup>div>button {
+    position: absolute;
+    right: 6%;
+    top: 6%;
+    aspect-ratio: 1/1;
+    box-shadow: 0 0 12px 2px rgb(0, 0, 0, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    animation: fadeIn .5s ease;
+}
+
+.login>div>button:hover,
+.signup>div>button:hover {
+    color: white;
+    transition: ease-in .2s;
+}
+
+.login>div>button:active,
+.signup>div>button:active {
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    padding: 0;
+    mix-blend-mode: difference;
+    filter: blur(4px);
+    opacity: 0;
+    transition: color ease-out .2s, filter ease-in .4s, opacity ease 1s;
+}
+
+.login>form>.floating-label>input,
+.signup>form>.floating-label>input,
+.login>form>section>.floating-label>input,
+.signup>form>section>.floating-label>input,
+.signup>form>div>.floating-label>input {
+    position: relative;
+    height: 32px;
+    padding-left: 4px;
+    background: transparent;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 16px;
+    transition: padding .2s ease, background 0s;
+}
+
+.login>form>.floating-label,
+.signup>form>.floating-label,
+.login>form>section>.floating-label,
+.signup>form>section>.floating-label,
+.signup>form>div>.floating-label {
+    animation: fadeInMoveUp 0.5s ease forwards;
+}
+
+.login>form>.floating-label,
+.signup>form>.floating-label,
+.login>form>section>.floating-label,
+.signup>form>section>.floating-label {
+    .error-input {
+        animation: error 0.5s ease forwards;
+    }
+}
+
+.signup>div>h2 {
+    position: absolute;
+    top: 12%;
+    left: 0;
+}
+
+.signup>section {
+    position: absolute;
+    bottom: 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 12px;
+    width: 88%;
+    animation: fadeIn .5s ease;
+}
+
+.signup>form>section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    min-height: fit-content;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.signup>form>section>label:nth-child(1) {
+    width: 38%;
+    z-index: 2;
+}
+
+.signup>form>section>label:nth-child(2) {
+    width: 40%;
+    margin-left: 2%;
+}
+
+.signup>form>section>label:nth-child(3) {
+    width: 48%;
+    margin-top: 24px;
+}
+
+.signup>form>section>label:nth-child(4) {
+    width: 30%;
+    margin-top: 24px;
+    margin-left: 2%;
+}
+
+.signup>span {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    padding: 12px;
+    animation: fadeInMoveUp 0.5s ease forwards;
+    overflow: visible;
+}
+
+.signup>span:not(:has(.picked-image))>button {
+    box-shadow: 0 10px 22px rgb(0, 0, 0, .4);
+}
+
+.signup>span:not(:has(.picked-image))>button>div {
+    box-shadow: none;
+}
+
+.signup>span:has(.picked-image)>button:not(.picked-image)>div {
+    box-shadow: inset 0 0 10px 60px rgb(43, 43, 43);
+    mix-blend-mode: screen;
+}
+
+.login>.text-button {
+    user-select: none;
+    height: 16px;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 80% "Helvetica Neue", Arial, sans-serif;
+    border: none;
+    outline: none;
+    display: flex;
+    background: transparent;
+    color: #888;
+    transition: .3s ease;
+    margin: 6px 0 -6px;
+    position: relative;
+    transition: color .2s ease;
+}
+
+.signup>form>div>div>.text-button {
+    user-select: none;
+    height: 16px;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    background: transparent;
+    color: #88888890;
+    transition: .3s ease;
+    position: relative;
+    transition: color .2s ease;
+    z-index: 1;
+}
+
+.login>.text-button:hover,
+.signup>form>div>div>.text-button:hover {
+    color: blueviolet;
+    background: transparent;
+    transition: color .3s ease;
+}
+
+.login>.text-button::after {
+    content: ' ';
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: #88888830;
+    width: 0;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: width .2s ease;
+}
+
+.login>.text-button:hover::after {
+    width: 40%;
+    transition: width .3s ease;
+}
+
+.login>.text-button:active,
+.signup>form>div>div>.text-button:active {
+    color: white;
+    filter: blur(4px);
+    opacity: 0;
+    transition: color ease-out .2s, filter ease-in .4s, opacity ease 1s;
+}
+
+.login>.text-button:active::after {
+    width: 10%;
+    transition: width .3s ease;
+}
+
+.login>hr {
+    outline: none;
+    border: 1px solid gainsboro;
+    margin: 6px 0 6px;
+    width: 50%;
+    z-index: -1;
+}
+
+.signup>form>div>hr {
+    outline: none;
+    border: 1px solid gainsboro;
+    width: 100%;
+    margin: -12px 0;
+    z-index: -1;
+}
+
+.signup>form>div {
+    height: fit-content;
+    margin: 72px 0 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    user-select: none;
+    cursor: default;
+}
+
+.signup>form>div>div {
+    color: #888;
+    font-size: 80%;
+    width: 100%;
+    user-select: none;
+    cursor: default;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: -12px;
+}
+
+.signup>form>div>div>h4 {
+    margin-right: 6px;
+}
+
+.signup>form>div>section {
+    overflow: hidden;
+    user-select: none;
+    cursor: default;
+    color: #888;
+    font-size: 80%;
+    width: 90%;
+    animation: fadeInMoveDownNoTrans .3s ease;
+}
+
+.signup>form>div>p {
+    animation: fadeInMoveUpNoTrans .3s ease;
+}

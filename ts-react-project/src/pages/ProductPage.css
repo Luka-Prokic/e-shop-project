@@ -1,0 +1,75 @@
+.product-page {
+    position: relative;
+    height: 100vh;
+    overflow: visible;
+}
+
+.product-page>.image {
+    position: absolute;
+    top: 128px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 20%;
+    background-color: white;
+    display: flex;
+    mix-blend-mode: multiply;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-page>.ghost-bar{
+    position: absolute;
+    top: 124px;
+    right: 12%;
+    aspect-ratio: 1/1.2;
+    animation: fadeIn .5s ease;
+    background-color: transparent;
+}
+
+.product-page>.ghost-bar>.price {
+    position: absolute;
+    top: 28%;
+    right: 20%;
+    width: 30%;
+    transform: translate(0, -50%);
+    color: darkslategray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.product-page>.ghost-bar>.buy {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 28%;
+    left: 10%;
+    width: 40%;
+}
+
+.product-page>.ghost-bar>.description {
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    width: 80%;
+    font-size: 80%;
+    text-align: justify;
+    color: #666;
+    user-select: none;
+}
+
+.product-page>.ghost-bar>.name {
+    position: absolute;
+    top: 6%;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    color: darkslategray;
+    user-select: none;
+}
+
+.product-page>.ghost-bar>.buy>.port-buy>button,
+.product-page>.ghost-bar>.buy>.port-counter>button {
+    font-weight: bold;
+    overflow: hidden;
+}

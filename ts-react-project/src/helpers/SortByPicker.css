@@ -1,0 +1,206 @@
+.sortby-picker {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 16px;
+    padding-left: 2%;
+    height: 32px;
+    animation: fadeIn .5s ease;
+    width: 80%;
+}
+
+.sortby-picker button {
+    color: darkslategray;
+    border-radius: 0;
+    background-color: whitesmoke;
+    box-shadow: 2px 10px 20px rgb(0, 0, 0, 0);
+    height: 100%;
+    min-width: fit-content;
+}
+
+.sortby-picker>button {
+    width: fit-content;
+    min-width: 120px;
+}
+
+.sortby-picker>button:first-of-type {
+    font-size: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sortby-picker>button:last-of-type {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.sortby-picker .dropdown-menu {
+    position: relative;
+    background-color: white;
+    width: fit-content;
+    z-index: 2;
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    animation: fadeInMoveDown .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sortby-picker .dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    transition: 0.1s ease;
+}
+
+.sortby-picker .dropdown-menu .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: blueviolet;
+}
+
+.sortby-picker .dropdown-menu .dropdown-item.selected {
+    position: relative;
+    background-color: #cccccc1c;
+    color: blueviolet;
+}
+
+.sortby-picker .dropdown-menu .dropdown-item.selected::after {
+    position: absolute;
+    content: ' ';
+    background-color: blueviolet;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    animation: fadeIn ease .1s;
+}
+
+.sort-buttons {
+    display: flex;
+    height: 100%;
+}
+
+.sortby-picker .dropdown-wrapper {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    padding: 4%;
+    display: inline-block;
+}
+
+.sort-tags>span {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.sort-tags-toggled>span {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+}
+
+.tags-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.picked-tags-list {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sort-tags-list {
+    position: absolute;
+    top: 120%;
+    left: -20%;
+    width: fit-content;
+    min-height: 100%;
+    height: fit-content;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    animation: fadeInMoveDown ease .3s;
+    opacity: .4;
+    transition: opacity ease .2s;
+}
+
+.sort-tags-list:hover {
+    opacity: 1;
+    transition: opacity ease .2s;
+}
+
+.sort-tag {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+    animation: ghost ease .3s;
+    user-select: none;
+    height: 24px;
+    margin: 1px;
+    background-color: whitesmoke;
+}
+
+.sort-tag:hover {
+    background-color: #f0f0f0;
+    color: blueviolet;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.all-tag {
+    cursor: default;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #333;
+    animation: fadeIn ease .3s;
+    user-select: none;
+    height: 24px;
+    margin: 1px;
+    background-color: whitesmoke;
+}
+
+
+.remove-tag {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin: 1px;
+    color: red;
+    cursor: pointer;
+    animation: ghost ease .3s;
+    user-select: none;
+    height: 24px;
+    background-color: whitesmoke;
+    color: red;
+    font-weight: normal;
+}
+
+.remove-tag:hover {
+    background-color: red;
+    color: white;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}

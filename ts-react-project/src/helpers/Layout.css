@@ -1,0 +1,26 @@
+.second-layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3%;
+    padding: 3% 4%;
+    overflow: visible;
+    transition: .1s ease-out;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.first-layout {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2%;
+    padding: 3% 4%;
+    overflow: visible;
+    transition: .1s ease-out;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.second-layout>*,
+.first-layout>* {
+    width: 100%;
+}

@@ -1,0 +1,125 @@
+#app {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+[title-custom]::after {
+  content: attr(title-custom);
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  height: 12px;
+  width: fit-content;
+  visibility: hidden;
+  z-index: 20;
+  opacity: 0;
+  text-transform: lowercase;
+  transition: opacity .2s ease-in;
+}
+
+[title-custom]:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .2s ease-in .8s;
+  pointer-events: none;
+}
+
+.s {
+  width: 20%;
+  transition: opacity ease .4s;
+}
+
+.m {
+  width: 50%;
+  transition: width ease .4s;
+}
+
+.l {
+  width: 80%;
+  transition: opacity ease .4s;
+}
+
+.max {
+  width: 100%;
+  opacity: 1;
+  transition: opacity ease .4s;
+}
+
+.six {
+  width: 60%;
+  transition: opacity ease .4s;
+}
+
+.three {
+  width: 30%;
+  transition: opacity ease .4s;
+}
+
+.four {
+  width: 40%;
+  transition: opacity ease .4s;
+}
+
+.one {
+  width: 10%;
+  transition: opacity ease .4s;
+}
+
+.se7en {
+  width: 5%;
+  transition: opacity ease .2s;
+}
+
+.two {
+  width: 3%;
+  transition: opacity ease .4s;
+}
+
+.e8ght {
+  width: 16.66%;
+  transition: opacity ease .4s;
+}
+
+.none {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0px;
+  transition: opacity ease .4s, height ease .4s;
+  animation: fadeOut ease .4s;
+}
+
+.fs {
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+button {
+  user-select: none;
+}

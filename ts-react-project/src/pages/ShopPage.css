@@ -1,0 +1,28 @@
+.shop-page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1% 0;
+    justify-content: center;
+    overflow: visible;
+    transition: .1s ease-out;
+}
+
+.shop-page-up-button>button {
+    position: fixed;
+    bottom: 6%;
+    right: 6%;
+    width: 5vw;
+    height: 5vw; 
+    aspect-ratio: 1/1;
+    color: white;
+    background-color: #cccccc8e;
+    font-size: 3vw;
+    border-radius: 50%;
+    animation: ghost 0.4s ease;
+  }
+
+.shop-page-skelet{
+    margin: 0 50%;
+    transform: translate(-50%, 0);
+}

@@ -1,0 +1,28 @@
+.layout-picker {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 16px;
+    padding-right: 2%;
+    height: 32px;
+    animation: fadeIn .5s ease;
+    width: 20%;
+}
+
+.layout-picker>button {
+    color: darkslategray;
+    border-radius: 0;
+    background-color: whitesmoke;
+    box-shadow: 2px 10px 20px rgb(0, 0, 0, 0);
+    height: 100%;
+}
+
+.layout-picker>button:first-of-type {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.layout-picker>button:last-of-type {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

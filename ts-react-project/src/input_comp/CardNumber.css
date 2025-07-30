@@ -1,0 +1,105 @@
+.label-creditcard-checkbox {
+    position: relative;
+    user-select: none;
+    color: #888;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: color .2s ease;
+    cursor: pointer;
+}
+
+.show-creditcard-checkbox {
+    opacity: 0;
+}
+
+.cc-checkmark {
+    position: relative;
+    height: 18px;
+    width: 18px;
+    border: 2px solid #888;
+    border-radius: 2px;
+    display: inline-block;
+    transition: background-color .2s ease;
+}
+
+.label-creditcard-checkbox:hover .cc-checkmark {
+    border-color: #aaa;
+    transition: background-color .3s ease;
+}
+
+.cc-checkmark::before {
+    content: ' ';
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: #88888830;
+    width: 0;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: width .2s ease;
+}
+
+.label-creditcard-checkbox:hover .cc-checkmark::before {
+    width: 200%;
+    transition: width .3s ease;
+}
+
+.label-creditcard-checkbox:hover {
+    color: #aaa;
+    transition: color .3s ease;
+}
+
+.show-creditcard-checkbox:checked+.cc-checkmark {
+    background-color: blueviolet;
+    border: none;
+    transition: background-color .2s ease, border .2s ease;
+}
+
+.cc-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    bottom: 0;
+    right: 0;
+}
+
+.show-creditcard-checkbox:checked+.cc-checkmark:after {
+    display: block;
+}
+
+.cc-checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    transition: color .2s ease;
+    animation: fadeInMoveUp .2s ease;
+}
+
+.label-creditcard-checkbox:has(.show-creditcard-checkbox:checked) {
+    color: blueviolet;
+    user-select: none;
+    transition: color .2s ease;
+}
+
+.card-type-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 16%) 46%;
+    gap: 2%;
+    overflow: visible;
+    justify-items: center;
+    align-items: center;
+}
+
+.card-type-buttons>button {
+    mix-blend-mode: multiply;
+    clip-path:view-box;
+    user-select: none;
+}

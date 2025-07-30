@@ -1,0 +1,227 @@
+.java-button {
+    aspect-ratio: 1.618/1;
+    color: rgb(70, 70, 70);
+    border-left: 1px solid gray;
+    border-top: 1px solid whitesmoke;
+    border-right: 2px solid whitesmoke;
+    border-bottom: 2px solid gray;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+    transition: .1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.java-button:active {
+    color: black;
+    border-left: 3px solid rgb(169, 169, 169);
+    border-top: 3px solid rgb(169, 169, 169);
+    border-right: 0px solid rgb(61, 61, 61);
+    border-bottom: 0px solid rgb(61, 61, 61);
+    background-color: rgb(200, 200, 200);
+    cursor: pointer;
+    transition: .1s;
+}
+
+.java-button.toggled {
+    color: black;
+    border-left: 3px solid rgb(169, 169, 169);
+    border-top: 3px solid rgb(169, 169, 169);
+    border-right: 0px solid rgb(61, 61, 61);
+    border-bottom: 0px solid rgb(61, 61, 61);
+    background-color: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+.java-button:hover {
+    background: linear-gradient(0deg,
+            rgb(213, 217, 235) 0%,
+            rgb(255, 255, 255) 80%,
+            rgba(214, 224, 241, 0.5) 100%);
+}
+
+.java-button:active:hover {
+    background: linear-gradient(0deg,
+            rgba(131, 134, 145, 0.4) 0%,
+            rgba(255, 227, 227, 0.6) 60%,
+            rgba(100, 105, 113, 0.2) 100%);
+}
+
+.java-button.toggled:hover {
+    background: linear-gradient(0deg,
+            rgba(131, 134, 145, 0.4) 0%,
+            rgba(255, 227, 227, 0.6) 60%,
+            rgba(100, 105, 113, 0.2) 100%);
+}
+
+
+.minimal-button {
+    aspect-ratio: 1.618/1;
+    color: gray;
+    border: 3px solid gray;
+    background-color: rgb(240, 240, 240);
+    font-weight: bold;
+    cursor: pointer;
+    transition: .1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minimal-button:active,
+.minimal-button:active:hover {
+    color: red;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 rgba(128, 128, 128, .2);
+    cursor: pointer;
+    transition: .1s;
+}
+
+.minimal-button.toggled {
+    color: red;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 rgba(128, 128, 128, .2);
+    cursor: pointer;
+}
+
+.minimal-button:hover {
+    border: 3px solid white;
+    box-shadow: 0 0 12px 4px rgba(128, 128, 128, .2);
+    background-color: rgba(200, 200, 200, .5);
+    transition: .2s;
+}
+
+.port-button {
+    aspect-ratio: 3/1;
+    cursor: pointer;
+    max-height: 64px;
+    transition: color ease 0.4s, border ease .4s;
+    border-radius: 32px;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25), inset 0px 0px 3px rgba(0, 0, 0, 0.7), inset 0px -3px 0px rgba(255, 255, 255, 0.1);
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #888;
+}
+
+.port-button:hover {
+    transition: color ease 0.4s, border ease .4s, background ease .2s;
+    background: rgba(0, 0, 0, .05);
+    color: #4b4b4b;
+}
+
+.port-button:active {
+    transition: color ease 0.4s;
+    padding-top: 3px;
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.3), inset 0px 3px 3px rgba(0, 0, 0, 0.3), 0px 3px 0px rgba(255, 255, 255, 0.1);
+    color: #4b4b4b;
+}
+
+.port-button.toggled {
+    padding-top: 3px;
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.3), inset 0px 3px 3px rgba(0, 0, 0, 0.3), 0px 3px 0px rgba(255, 255, 255, 0.1);
+    color: #4b4b4b;
+}
+
+.bubble-button {
+    user-select: none;
+    aspect-ratio: 1.618/1;
+    min-height: 36px;
+    max-height: 64px;
+    cursor: pointer;
+    transition: aspect-ratio ease-in .2s, color ease 0.4s, border ease .4s, border-top ease-out .2s, box-shadow ease-out .2s, background ease .2s, border-radius ease .8s, width ease .3s, top ease .2s, left ease .2s;
+    border-radius: 32px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    background: transparent;
+    box-shadow: inset 0 0 0 transparent, 0 0 0 transparent;
+}
+
+.bubble-button:hover{
+    color: red;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 0 0 transparent, 2px 10px 12px rgb(0, 0, 0, .3);
+    transition: all  ease .1s;
+}
+
+.bubble-button:active {
+    padding-top: 3px;
+    color: darkslategray;
+    border-top: 3px solid gray;
+    background-color: rgba(220, 220, 220, 0.9);
+    box-shadow: inset 0 -2px 30px rgb(0, 0, 0, .3), 0 0 0 transparent;
+    transition: all  ease .1s;
+}
+
+.bubble-button.toggled {
+    padding-top: 3px;
+    color: darkslategray;
+    border-top: 3px solid gray;
+    background-color: rgba(220, 220, 220, 0.9);
+    box-shadow: inset 0 -2px 30px rgb(0, 0, 0, .3), 0 0 0 transparent;
+}
+
+.bubble-button.toggled:hover {
+    padding-top: 3px;
+    color: darkslategray;
+    border-top: 3px solid gray;
+    background-color: rgba(220, 220, 220, 0.9);
+    box-shadow: inset 0 -2px 30px rgb(0, 0, 0, .3), 0 0 0 transparent;
+}
+
+.text-button {
+    user-select: none;
+    max-height: 64px;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background: transparent;
+    color: black;
+}
+
+.text-button:hover {
+    background-color: darkred;
+    transition: .3s ease;
+}
+
+.zara-button {
+    user-select: none;
+    min-height: 22px;
+    max-height: 64px;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    border: none;
+    outline: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: black;
+}
+
+.zara-button:hover {
+    color: #888;
+}
+
+.zara-button:active {
+    background-color: black;
+}

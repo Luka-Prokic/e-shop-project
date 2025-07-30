@@ -1,0 +1,161 @@
+.product-list {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    overflow-y: hidden;
+    color: #888;
+    z-index: 2;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
+    animation: fadeInMoveDown .2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .2s ease;
+}
+
+.product-element {
+    position: relative;
+    padding: 2px;
+    padding-left: 12px;
+    width: 100%;
+    animation: fadeIn ease .2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.product-element>* {
+    margin: 4px;
+    mix-blend-mode: multiply;
+}
+
+.product-element.selected {
+    color: blueviolet;
+    background-color: #cccccc1c;
+    transition: ease .1s;
+}
+
+.product-element.selected::after {
+    position: absolute;
+    content: ' ';
+    background-color: blueviolet;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    animation: fadeIn ease .1s;
+}
+
+.floating-label:has(.search-input)>button {
+    border-radius: 2px;
+}
+
+.no-product-element {
+    position: relative;
+    padding: 2px;
+    padding-left: 12px;
+    width: 100%;
+    animation: fadeIn ease .6s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+    border-radius: 4px;
+    height: 32px;
+}
+
+.product-history {
+    position: relative;
+    padding: 2px;
+    padding-left: 22px;
+    width: 100%;
+    animation: fadeIn ease .2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.product-history>* {
+    margin: 4px;
+    mix-blend-mode: multiply;
+}
+.product-history.selected >* {
+    margin: 4px;
+    mix-blend-mode:normal;
+}
+.product-history.selected {
+    position: relative;
+    padding: 2px;
+    padding-left: 22px;
+    width: 100%;
+    animation: fadeIn ease .2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-style: italic;
+    border-radius: 4px;
+    color: blueviolet;
+    background-color: #cccccc1c;
+    transition: ease .1s;
+}
+
+.product-history.selected::after {
+    position: absolute;
+    content: ' ';
+    background-color: blueviolet;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    animation: fadeIn ease .1s;
+}
+
+.product-history::before {
+    position: absolute;
+    content: '#';
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    animation: fadeIn ease .1s;
+}
+
+.delete-history {
+    position: relative;
+    padding: 2px;
+    padding-left: 12px;
+    width: 100%;
+    animation: fadeIn ease .2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: red;
+    border-radius: 4px;
+}
+
+.delete-history:hover {
+    color: white;
+    background-color: red;
+    transition: ease .1s;
+}
+
+.product-search-button{
+    width: 36px;
+    height: 36px;
+    aspect-ratio: 1/1;
+}

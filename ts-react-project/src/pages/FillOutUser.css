@@ -1,0 +1,32 @@
+.user-checkout-part {
+    min-height: 256px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 16px;
+    animation: ghost ease .6s;
+}
+
+.user-checkout-part section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    animation: fadeInMoveDownNoTrans ease .6s;
+}
+
+.user-checkout-part>section>section>section>* {
+    margin-bottom: 22px;
+}
+
+.user-checkout-part hr {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: center;
+    border: 1px solid gainsboro;
+    width: 100%;
+    margin: -20px 0;
+}

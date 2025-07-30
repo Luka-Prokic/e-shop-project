@@ -1,0 +1,30 @@
+.personal-checkout-part {
+    min-height: 256px;
+    gap: 16px;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.personal-checkout-part>section>section>section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    animation: fadeInMoveDownNoTrans ease .6s;
+}
+
+
+.personal-checkout-part>section>section>section>* {
+    margin-bottom: 22px;
+}
+
+.personal-checkout-part>section>section>section>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}

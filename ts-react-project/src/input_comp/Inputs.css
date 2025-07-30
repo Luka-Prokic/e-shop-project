@@ -1,0 +1,163 @@
+.minimal-input {
+  padding-inline-start: 2px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+.minimal-input:focus {
+  padding-inline-start: 2px;
+  outline: none;
+  border: 1px solid blueviolet;
+  position: relative;
+  color: black;
+  background: white;
+  box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.1);
+  transition: .2s ease, background 0s;
+}
+
+.bubble-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 1px solid gray;
+}
+
+.readonly {
+  cursor: default;
+}
+
+.error-input {
+  padding-inline-start: 2px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+
+.error-input:focus {
+  padding-inline-start: 2px;
+  outline: none;
+  border: 1px solid red;
+  background: white;
+  position: relative;
+  transition: .2s ease, background 0s;
+}
+
+.floating-label {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+
+.floating-label span {
+  position: absolute;
+  bottom: 50%;
+  left: 4%;
+  pointer-events: none;
+  transform: translate(0, 50%);
+  transition: bottom 0.1s ease;
+  color: #888;
+  z-index: -1;
+  user-select: none;
+  cursor: default;
+}
+
+.minimal-input:focus+span {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding: 2px;
+  font-size: 12px;
+  background-color: blueviolet;
+  color: white;
+  transform: none;
+  border-radius: 2px;
+  transition: bottom 0.1s ease;
+}
+
+.error-input:focus+span {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding: 2px;
+  font-size: 12px;
+  background-color: red;
+  color: white;
+  border-radius: 2px;
+  transform: none;
+  transition: bottom 0.1s ease;
+}
+
+.error-input:not(:placeholder-shown)+span,
+.minimal-input:not(:placeholder-shown)+span,
+.search-input:not(:placeholder-shown)+span {
+  color: transparent;
+}
+
+.error-input:focus+span,
+.minimal-input:focus+span,
+.search-input:focus+span {
+  color: white;
+}
+
+.search-input,
+.search-input-selected {
+  min-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 1px solid gray;
+  padding: 4px;
+  position: relative;
+  padding-left: 4px;
+  background: transparent;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 16px;
+}
+
+.search-input-selected:focus {
+  min-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 1px solid blueviolet;
+  padding: 4px;
+  position: relative;
+  padding-left: 4px;
+  background: transparent;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 16px;
+}
+
+.search-input:focus+span {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding: 2px;
+  font-size: 10px;
+  background-color: #888;
+  color: white;
+  transform: none;
+  border-radius: 2px;
+  transition: bottom 0.1s ease;
+}
+
+.search-input-selected:focus+span {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding: 2px;
+  font-size: 10px;
+  background-color: blueviolet;
+  color: white;
+  transform: none;
+  border-radius: 2px;
+  transition: bottom 0.1s ease;
+}

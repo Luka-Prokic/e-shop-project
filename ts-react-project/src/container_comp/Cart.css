@@ -1,0 +1,207 @@
+.port-cart-button {
+    user-select: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 128px;
+    min-width: 64px;
+    user-select: none;
+    margin: 1%;
+    aspect-ratio: 1.618/1;
+    max-height: 64px;
+    cursor: pointer;
+    transition: border ease .4s, border-top ease-out .2s, box-shadow ease-out .2s, background ease .2s, border-radius ease .8s, color ease .6s;
+    border-radius: 32px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 160% "Helvetica Neue", Arial, sans-serif;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    background: transparent;
+    box-shadow: inset 0 0 0 transparent, 0 0 0 transparent;
+    z-index: 2;
+    animation: fadeIn ease .2s;
+}
+
+.port-cart-button>p {
+    font-weight: bold;
+}
+
+.port-cart {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    max-height: 100vh;
+    cursor: pointer;
+    transition: aspect-ratio ease-in .1s, color ease .2s, border ease .2s, border-radius ease .3s, background ease .3s, width ease .2s, height ease .2s, top ease .1s, left ease .1s;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    background: white;
+    outline: none;
+    color: black;
+    cursor: default;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.port-cart::-webkit-scrollbar {
+    width: 0;
+}
+
+.port-cart-button:hover {
+    color: red;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 0 0 transparent, 2px 10px 12px rgb(0, 0, 0, .3);
+    transition: box-shadow ease-out .2s, background ease .2s, color ease .2s, aspect-ratio ease-in .2s;
+}
+
+.port-cart-button:active {
+    color: red;
+    border-top: 4px solid gray;
+    background: transparent;
+    box-shadow: inset 0 -2px 12px rgb(0, 0, 0, .3), 0 0 0 transparent;
+    transition: box-shadow ease-out .1s, background ease .1s;
+
+    input {
+        top: -12px;
+    }
+}
+
+.port-cart-button>input {
+    z-index: 3;
+    user-select: none;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    border-radius: 50%;
+    max-width: 32px;
+    min-width: 16px;
+    aspect-ratio: 1/1;
+    background-color: red;
+    color: white;
+    border: none;
+    text-align: center;
+    outline: none;
+    transition: opacity ease .2s;
+}
+
+.port-cart>div:has(button) {
+    align-self: center;
+    margin: 8px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.zara-cart-button {
+    user-select: none;
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    max-width: 128px;
+    min-width: 64px;
+    user-select: none;
+    margin: 10px;
+    aspect-ratio: 2/1;
+    max-height: 64px;
+    cursor: pointer;
+    transition: border ease .4s, border-top ease-out .2s, box-shadow ease-out .2s, background ease .2s, border-radius ease .8s, color ease .6s;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 120% "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    box-shadow: inset 0 0 0 transparent, 0 0 0 transparent;
+    z-index: 2;
+}
+
+.zara-cart {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    max-height: 100vh;
+    transition: aspect-ratio ease-in .1s, color ease .2s, border ease .2s, border-radius ease .3s, background ease .3s, width ease .2s, height ease .2s, top ease .1s, left ease .1s;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    outline: 1px solid black;
+    color: black;
+    cursor: default;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.zara-cart::-webkit-scrollbar {
+    width: 0;
+}
+
+.zara-cart-button:hover {
+    color: #888;
+    transition: color ease .1s;
+}
+
+.zara-cart-button:active {
+    color: #ccc;
+    background-color: white;
+    transition: color ease .1s, background ease .1s;
+
+}
+
+.zara-cart-button:active>input {
+    top: -12px;
+}
+
+.zara-cart-button>input {
+    z-index: 3;
+    user-select: none;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    max-width: 18px;
+    min-width: 12px;
+    aspect-ratio: 1/1;
+    background-color: black;
+    font: 60% "Helvetica Neue", Arial, sans-serif;
+    color: white;
+    border: none;
+    text-align: center;
+    outline: none;
+    transition: opacity ease .2s;
+}
+
+.zara-cart>div:has(button) {
+    align-self: center;
+    margin: 8px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.zara-cart>div:has(button)>button,
+.zara-cart>div:has(button)>div {
+    background-color: white;
+    outline: 1px solid black;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

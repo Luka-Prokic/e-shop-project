@@ -1,0 +1,211 @@
+.java-counter {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    aspect-ratio: 3/1;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: grid-template-columns .2s ease-in;
+    overflow: hidden;
+}
+
+.java-buy {
+    display: grid;
+    grid-template-columns: 0% 0% 100%;
+    aspect-ratio: 3/1;
+    cursor: pointer;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: grid-template-columns .2s ease-in;
+    overflow: hidden;
+}
+
+.java-buy>button {
+    aspect-ratio: 3/1;
+}
+
+.java-counter>input {
+    text-align: center;
+    outline: 0px solid transparent;
+    border-left: 1px solid gray;
+    border-top: 1px solid whitesmoke;
+    border-right: 2px solid whitesmoke;
+    border-bottom: 2px solid gray;
+    cursor: default;
+}
+
+.java-counter>* {
+    height: 100%;
+    transition: opacity .25s ease-in, filter .25s ease-in;
+}
+
+.java-buy>* {
+    cursor: pointer;
+}
+
+.port-counter {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    aspect-ratio: 3/1;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: grid-template-columns .2s ease-in;
+    overflow: hidden;
+}
+
+.port-buy {
+    display: grid;
+    grid-template-columns: 0% 0% 100%;
+    aspect-ratio: 3/1;
+    cursor: pointer;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: grid-template-columns .2s ease-in;
+    overflow: hidden;
+}
+
+.port-buy>* {
+    cursor: pointer;
+}
+
+.port-counter>* {
+    height: 100%;
+    transition: opacity .25s ease-in, filter .25s ease-in;
+}
+
+.port-counter>input {
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25), inset 0px 0px 3px rgba(0, 0, 0, 0.7), 0px 0px 0px rgba(255, 255, 255, 0.1);
+    border: none;
+    background: white;
+    outline: none;
+    cursor: default;
+}
+
+.port-counter>button:first-of-type {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.port-counter>button:last-of-type {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.bubble-counter {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    aspect-ratio: 3 / 1;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: grid-template-columns .2s ease-in;
+    overflow: visible;
+}
+
+.bubble-buy {
+    display: grid;
+    grid-template-columns: 0% 0% 100%;
+    aspect-ratio: 3/1;
+    border-radius: 32px;
+    cursor: pointer;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: grid-template-columns .2s ease-in;
+    overflow: hidden;
+}
+
+.bubble-buy>* {
+    cursor: pointer;
+    aspect-ratio:unset;
+    font-weight: bold;
+}
+
+.bubble-counter>* {
+    font-weight: bold;
+    aspect-ratio:unset;
+    transition: opacity .5s ease-in, filter .25s ease-in;
+}
+
+.bubble-counter>input {
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #888;
+    cursor: default;
+    box-shadow: inset 0 0 0 transparent;
+    transition: border-top ease-out .2s, box-shadow ease-out .2s, background ease .2s, padding-top ease .1s;
+}
+
+.bubble-counter:hover>input {
+    color: darkslategray;
+    background: transparent;
+    transition: background ease .2s;
+}
+
+.bubble-counter:hover>button {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 0 0 transparent, 1px 6px 8px rgb(0, 0, 0, .3);
+    transition: box-shadow ease-out .2s, background ease .2s, color ease .2s, aspect-ratio ease-in .2s;
+}
+
+.bubble-counter:hover>button:active {
+    padding-top: 3px;
+    color: red;
+    border-top: 4px solid gray;
+    background: transparent;
+    box-shadow: inset 0 -2px 12px rgb(0, 0, 0, .3), 0 0 0 transparent;
+    transition: border-top ease-out .2s, box-shadow ease-out .2s, background ease .2s;
+}
+
+.zara-counter {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    aspect-ratio: 3/1;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: grid-template-columns .1s ease-in;
+    overflow: visible;
+}
+
+.zara-buy {
+    display: grid;
+    grid-template-columns: 0% 0% 100%;
+    aspect-ratio: 3/1;
+    cursor: pointer;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: grid-template-columns .1s ease-in;
+    overflow: visible;
+}
+
+.zara-buy>* {
+    cursor: pointer;
+}
+
+.zara-buy>button {
+    aspect-ratio: 3/1;
+    color: black;
+}
+
+.zara-counter>* {
+    height: 100%;
+}
+
+.zara-counter>button {
+    width: 100%;
+    color: black;
+}
+
+.zara-counter>input {
+    text-align: center;
+    font: 100% "Helvetica Neue", Arial, sans-serif;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: black;
+    cursor: default;;
+}

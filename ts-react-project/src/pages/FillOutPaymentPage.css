@@ -1,0 +1,32 @@
+.payment-checkout-part {
+    min-height: 256px;
+    gap: 16px;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.payment-checkout-part>section>b {
+    margin-bottom: 16px;
+}
+
+.payment-checkout-part section {
+    height: 100%;
+    gap: 5%;
+}
+
+.payment-form>* {
+    margin-bottom: 5%;
+    animation: fadeInMoveDownNoTrans ease .6s;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 90%;
+    justify-content: space-evenly;
+}

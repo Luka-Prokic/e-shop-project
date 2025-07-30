@@ -1,0 +1,43 @@
+.port-price {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: stretch;
+    align-items: center;
+}
+
+.port-price>p {
+    font-size: 100%;
+}
+
+.port-price>del {
+    font-size: 75%;
+    color: #888;
+}
+
+.port-price>span {
+    font-size: 100%;
+}
+
+
+.zara-price {
+    text-align: center;
+    user-select: none;
+}
+
+.zara-price>p {
+    font-size: 100%;
+    font: "Helvetica-Neue";
+}
+
+.zara-price>del {
+    font-size: 75%;
+    color: #888;
+    font: "Helvetica-Neue";
+}
+
+.zara-price>span {
+    font-size: 100%;
+    font: "Helvetica-Neue";
+}
