@@ -49,15 +49,7 @@ This project provides a **customer-facing store** and a **separate admin dashboa
 ## ⚡️ How to Run
 
 ```bash
-git clone https://github.com/Luka-Prokic/e-shop-project.git
-
-# Running the Client (React)
+git clone https://github.com/yourusername/ecommerce-shop.git
 cd react-shop
 npm install
 npm run dev
-
-# Running the Admin & Backend (Next.js + PocketBase)
-cd next_server
-npm install
-npm run dev
-./pocketbase serve
