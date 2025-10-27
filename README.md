@@ -16,7 +16,7 @@ This project provides a **customer-facing store** and a **separate admin dashboa
 - **Landing page** with product listing  
 -  **Admin dashboard** (separate URL)  
   -  Add, edit, and delete products  
-  -  Manage product tags  
+  -  Manage product tags     
 -  **PocketBase** integration for database and API  
 -  Basic **user authentication** shared across customer/admin routes
 
